@@ -1,0 +1,17 @@
+<router-outlet></router-outlet>
+
+<div>
+  <cm-autocomplete
+    [id]="cmID"
+    [autocompletionOptions]="autocompletionOptions"
+    (ready)="onReady()"
+  ></cm-autocomplete>
+</div>
+
+<br />
+
+<div
+  style="border: 1px solid #dfdfdf; max-height: calc(100vh - 66px); overflow: auto;"
+>
+  <pre>{{ filteredDatasource | json }}</pre>
+</div>
